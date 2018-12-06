@@ -1,0 +1,14 @@
+name: System-Citybuild
+main: Cb\Manager
+api: 3.0.0
+version: 1.0
+author: bySuartix
+commands:
+        hub:
+           description: "Teleport zur Hub"
+        fw:
+           description: "Farmwelt"
+        setspawn:
+           description: "Admin Command"
+        citybuild:
+           description: "Teleport zur Plotwelt"
