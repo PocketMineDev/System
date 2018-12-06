@@ -28,10 +28,10 @@ use pocketmine\network\mcpe\protocol\RemoveObjectivePacket;
 
 class Manager extends PluginBase implements Listener {
 	
-	public $cb = "Â§cSystem Â§7|";
+	public $cb = "§cSystem §7|";
 	
 	public function onEnable() {
-	$this->getLogger()->info("Â§cLade Farmwelten...");
+	$this->getLogger()->info("§cLade Farmwelten...");
 	$this->getServer()->loadLevel("FarmWelt");
 	 @mkdir($this->getDataFolder());
         $config = new Config($this->getDataFolder()."config.yml", Config::YAML);
@@ -134,11 +134,11 @@ class Manager extends PluginBase implements Listener {
             if(!empty($args[0])){
                 if(strtolower($args[0]) == "help"){
                     if($sender->isOp()){
-                    	$sender->sendMessage("Â§7====================");
-                        $sender->sendMessage("Â§b /setspawn setfarmwelt");
-                        $sender->sendMessage("Â§b /setspawn setcitybuild");
+                    	$sender->sendMessage("§7====================");
+                        $sender->sendMessage("§b /setspawn setfarmwelt");
+                        $sender->sendMessage("§b /setspawn setcitybuild");
                     }
-                    $sender->sendMessage("Â§7====================");
+                    $sender->sendMessage("§7====================");
                 } elseif(strtolower($args[0]) == "setfarmwelt" && $sender->isOp()){
                     if($sender instanceof Player){
                         //$config->setNested("Farmwelt.Welt", $sender->getLevel()->getName());
@@ -148,7 +148,7 @@ class Manager extends PluginBase implements Listener {
                         $config->setNested("Farmwelt.Yaw", $sender->getYaw());
                         $config->setNested("Farmwelt.Pitch", $sender->getPitch());
                         $config->save();
-                        $sender->sendMessage($this->cb."Â§aDu hast Erfolgreich den Spawn von der Farmwelt gesetzt");
+                        $sender->sendMessage($this->cb."§aDu hast Erfolgreich den Spawn von der Farmwelt gesetzt");
                     }
                     
                     } elseif(strtolower($args[0]) == "setcitybuild" && $sender->isOp()){
@@ -160,11 +160,10 @@ class Manager extends PluginBase implements Listener {
                         $config->setNested("CityBuild.Yaw", $sender->getYaw());
                         $config->setNested("CityBuild.Pitch", $sender->getPitch());
                         $config->save();
-                        $sender->sendMessage($this->cb."Â§aDu hast Erfolgreich den Spawn von CityBuild gesetzt");
+                        $sender->sendMessage($this->cb."§aDu hast Erfolgreich den Spawn von CityBuild gesetzt");
                    }
                 } 
              }
             return true;
           }
        }
-     }
