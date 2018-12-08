@@ -1,7 +1,7 @@
 name: System-Citybuild
 main: Cb\System
 api: 3.0.0
-version: 1.2
+version: 1.2.1
 author: bySuartix
 commands:
         hub:
